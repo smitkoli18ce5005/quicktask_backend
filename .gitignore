@@ -1,0 +1,24 @@
+# Node.js dependencies
+/node_modules
+
+# Environment variables file (created by dotenv)
+.env
+
+# Logs
+logs
+*.log
+
+# Debugging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor-specific files
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS-specific files
+.DS_Store
+Thumbs.db
