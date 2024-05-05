@@ -5,7 +5,7 @@
     * https://nodejs.org/en/download
       OR 
     * https://nodejs.org/dist/v20.9.0/node-v20.9.0-x64.msi
-* Run express backend
+* Run quicktask_backend
     * Install all dependencies
         * npm install
     * Create .env file in main directory and add below keys of back4apps in files
