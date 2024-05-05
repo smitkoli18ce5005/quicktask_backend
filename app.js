@@ -95,13 +95,6 @@ app.post('/login', async (req, res) => {
 });
 
 
-app.get('/protected', verifyToken, (req, res) => {
-    const { username } = req.user;
-    
-    res.status(200).json({ message: `Welcome, ${username}! This is a protected route.` });
-});
-
-
 app.get('/task/getall', verifyToken, async (req, res) => {
     try {
         const { username } = req.user;
@@ -117,7 +110,7 @@ app.get('/task/getall', verifyToken, async (req, res) => {
 });
 
 
-app.post('/task/add', async (req, res) => {
+app.post('/task/add', verifyToken, async (req, res) => {
     try {
       const { title, username, done } = req.body;
   
@@ -138,7 +131,7 @@ app.post('/task/add', async (req, res) => {
 });
 
 
-app.patch('/task/update', async (req, res) => {
+app.patch('/task/update', verifyToken, async (req, res) => {
     try {
       const { objectId, done } = req.body;
 
@@ -158,7 +151,7 @@ app.patch('/task/update', async (req, res) => {
 });
 
 
-app.delete('/task/delete', async (req, res) => {
+app.delete('/task/delete', verifyToken, async (req, res) => {
     try {
       const { objectId } = req.body;
   
